@@ -18,4 +18,3 @@ class RecipeURLsTest(TestCase):
     def test_recipes_search_url_correct(self):
         url = reverse('recipes-search')
         self.assertEqual(url, '/recipes/search/')
-
