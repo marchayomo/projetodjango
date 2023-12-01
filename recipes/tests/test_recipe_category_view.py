@@ -1,10 +1,10 @@
 from django.urls import resolve, reverse
 from recipes import views
-
 from .test_recipe_base import RecipeTestBase
 
 
 class RecipeCategoryViewTest(RecipeTestBase):
+
     def test_recipe_category_view_function_is_correct(self):
         view = resolve(
             reverse('recipes:category', kwargs={'category_id': 1000})
@@ -38,4 +38,3 @@ class RecipeCategoryViewTest(RecipeTestBase):
         )
 
         self.assertEqual(response.status_code, 404)
-

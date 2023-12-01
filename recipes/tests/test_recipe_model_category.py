@@ -1,5 +1,5 @@
 from django.core.exceptions import ValidationError
-from .test_recipes_base import RecipeTestBase
+from .test_recipe_base import RecipeTestBase
 
 
 class RecipeCategoryModelTest(RecipeTestBase):

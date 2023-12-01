@@ -1,6 +1,5 @@
 from django.test import TestCase
-from recipes.models import Category, Recipe
-from django.contrib.auth.models import User
+from recipes.models import Category, Recipe, User
 
 
 class RecipeTestBase(TestCase):
@@ -25,7 +24,7 @@ class RecipeTestBase(TestCase):
             password=password,
             email=email,
         )
-
+    
     def make_recipe(
         self,
         category_data=None,
