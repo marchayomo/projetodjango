@@ -40,8 +40,6 @@ def search(request):
         raise Http404()
 
     recipes = Recipe.objects.filter(
-        Q(title__icontains=search_term) |
-        Q(description__icontains=search_term),
         Q(
             Q(title__icontains=search_term) |
             Q(description__icontains=search_term),
