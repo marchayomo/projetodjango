@@ -3,13 +3,15 @@ from django.db import models
 
 
 class Category(models.Model):
+    """ classe representando Categorias """
     name = models.CharField(max_length=65)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
 class Recipe(models.Model):
+    """ classe que cria modelo para receitas """
     title = models.CharField(max_length=65)
     description = models.CharField(max_length=165)
     slug = models.SlugField()
@@ -33,4 +35,4 @@ class Recipe(models.Model):
     )
 
     def __str__(self):
-        return self.title
+        return str(self.title)
